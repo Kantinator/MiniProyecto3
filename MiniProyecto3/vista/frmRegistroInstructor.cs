@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MiniProyecto3
+namespace MiniProyecto3.vista
 {
-    public partial class Form1 : Form
+    public partial class frmRegistroInstructor : Form
     {
-        public Form1()
+        public frmRegistroInstructor()
         {
             InitializeComponent();
         }
