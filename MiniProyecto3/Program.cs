@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProyecto3.vista;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
