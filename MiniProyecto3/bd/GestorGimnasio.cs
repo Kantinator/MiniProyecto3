@@ -59,6 +59,34 @@ namespace MiniProyecto3.bd
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+        public SqlDataReader consultaParticipantesInscritos(int idClase)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "EXEC sp_Participantes_Inscritos_En_Clase @idClase = @id";
+            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(idClase));
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
+
+        public SqlDataReader consultaDetallesAfiliacion(string fechaInicio, string fechaFin)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "EXEC sp_Afiliciones_Plan @inicio = @fechaInicio, @fin = @fechaFin";
+            cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+            cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
+        public SqlDataReader consultaClientesActivos()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "SELECT*FROM vista_clientes_subscripcion_activa";
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
 
         public SqlDataReader mostrarClase(int idClase)
         {

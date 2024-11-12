@@ -74,6 +74,18 @@
     <Compile Include="vista\FormInscripcionClase.Designer.cs">
       <DependentUpon>FormInscripcionClase.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\frmClientesActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmClientesActivos.Designer.cs">
+      <DependentUpon>frmClientesActivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\frmDetallesAfiliaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmDetallesAfiliaciones.Designer.cs">
+      <DependentUpon>frmDetallesAfiliaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\frmRegistroClases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,12 @@
     </Compile>
     <Compile Include="vista\frmRegistroHorario.Designer.cs">
       <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\frmParticipantesInscritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmParticipantesInscritos.Designer.cs">
+      <DependentUpon>frmParticipantesInscritos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,11 +119,20 @@
     <EmbeddedResource Include="vista\FormInscripcionClase.resx">
       <DependentUpon>FormInscripcionClase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\frmClientesActivos.resx">
+      <DependentUpon>frmClientesActivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\frmDetallesAfiliaciones.resx">
+      <DependentUpon>frmDetallesAfiliaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\frmRegistroClases.resx">
       <DependentUpon>frmRegistroClases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\frmRegistroHorario.resx">
       <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\frmParticipantesInscritos.resx">
+      <DependentUpon>frmParticipantesInscritos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
