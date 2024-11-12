@@ -15,7 +15,10 @@ CREATE TABLE Cliente (
 -- 2. Tabla Instructor
 CREATE TABLE Instructor (
     id_instructor INT IDENTITY(1,1) PRIMARY KEY,
-    nombre_instructor VARCHAR(100) NOT NULL
+    nombre_instructor VARCHAR(100) NOT NULL,
+    cedula VARCHAR(20) NOT NULL UNIQUE, -- Cédula única
+    telefono VARCHAR(15),
+    sexo VARCHAR(10) CHECK (sexo IN ('Masculino', 'Femenino')) -- Opciones para sexo
 );
 
 -- 3. Tabla [Plan]
@@ -97,7 +100,8 @@ CREATE TABLE Inscripcion_Clase (
 
 -- Insertar datos de prueba
 -- Instructor
-INSERT INTO Instructor (nombre_instructor) VALUES ('Juan Pérez');
+INSERT INTO Instructor (nombre_instructor, cedula, telefono, sexo)
+VALUES ('Juan Pérez', '12345678', '555-1234', 'Masculino');
 
 -- Plan
 INSERT INTO [Plan] (descripcion, horas_semanales, costo_mensual) VALUES ('Plan Básico', 5, 25.99);
@@ -113,16 +117,16 @@ INSERT INTO Cliente (nombre_cliente, correo_electronico, celular) VALUES ('Ana G
 
 -- Usuario (Cliente)
 INSERT INTO Usuario (nombre_usuario, contrasena, rol, id_cliente, id_instructor) 
-VALUES ('admin', 'contraseña123', 'Administrador', NULL, NULL);
+VALUES ('admin', 'contrasena123', 'Administrador', NULL, NULL);
 
 -- Afiliacion
-INSERT INTO Afiliacion (id_plan, id_instructor, id_cliente, fecha_inicio, fecha_fin) VALUES (1, 1, 1, '2024-01-01', '2024-12-31');
+INSERT INTO Afiliacion (id_plan, id_instructor, id_cliente, fecha_inicio, fecha_fin) VALUES (1, 2, 1, '2024-01-01', '2024-12-31');
 
 -- Plan_Beneficio (asignación de beneficio al plan)
 INSERT INTO Plan_Beneficio (id_plan, id_beneficio) VALUES (1, 1);
 
 -- Horario_Clase
-INSERT INTO Horario_Clase (id_clase, id_grupo, dia_semana, hora, id_instructor, max_participantes) VALUES (1, 101, 'Lunes', '09:00:00', 1, 20);
+INSERT INTO Horario_Clase (id_clase, id_grupo, dia_semana, hora, id_instructor, max_participantes) VALUES (1, 101, 'Lunes', '09:00:00', 2, 20);
 
 -- Inscripcion_Clase
 INSERT INTO Inscripcion_Clase (id_grupo, id_cliente, fecha_inicio, fecha_fin) VALUES (101, 1, '2024-02-01', '2024-02-28');
