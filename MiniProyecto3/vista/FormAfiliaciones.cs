@@ -32,7 +32,8 @@ namespace MiniProyecto3.vista
                 DateTime fechaFin = dtpFechaFin.Value;
 
                 // Crea una instancia de Afiliacion
-                Afiliacion afiliacion = new Afiliacion(idPlan, idInstructor, idCliente, fechaInicio, fechaFin);
+                modelo.Afiliacion afiliacion = new modelo.Afiliacion(idPlan, idInstructor, idCliente, fechaInicio, fechaFin);
+
 
                 // Llama al método para crear la afiliación en la BD
                 bool exito = afiliacion.CrearAfiliacion();

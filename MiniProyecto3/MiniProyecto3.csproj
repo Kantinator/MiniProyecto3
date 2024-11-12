@@ -48,10 +48,13 @@
   <ItemGroup>
     <Compile Include="Afiliacion.cs" />
     <Compile Include="bd\Conexion.cs" />
+    <Compile Include="modelo\Afiliacion.cs" />
     <Compile Include="bd\GestorGimnasio.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="modelo\Clase.cs" />
+    <Compile Include="modelo\Cliente.cs" />
     <Compile Include="controlador\GimnasioMaster.cs" />
-    <Compile Include="InscripcionClase.cs" />
+    <Compile Include="modelo\HorarioClase.cs" />
+    <Compile Include="modelo\InscripcionClase.cs" />
     <Compile Include="vista\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +81,18 @@
     <Compile Include="vista\FormInscripcionClase.Designer.cs">
       <DependentUpon>FormInscripcionClase.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\frmRegistroClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmRegistroClases.Designer.cs">
+      <DependentUpon>frmRegistroClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\frmRegistroHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\frmRegistroHorario.Designer.cs">
+      <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="vista\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +105,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vista\frmRegistroClases.resx">
+      <DependentUpon>frmRegistroClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\frmRegistroHorario.resx">
+      <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,8 +124,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

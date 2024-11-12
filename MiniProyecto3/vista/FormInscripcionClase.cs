@@ -31,7 +31,8 @@ namespace MiniProyecto3.vista
                 DateTime fechaFin = dtpFechaFin.Value;
 
                 // Crea una instancia de InscripcionClase
-                InscripcionClase inscripcionClase = new InscripcionClase(idGrupo, idCliente, fechaInicio, fechaFin);
+                modelo.InscripcionClase inscripcionClase = new modelo.InscripcionClase(idGrupo, idCliente, fechaInicio, fechaFin);
+
 
                 // Llama al método para crear la inscripción en la BD
                 bool exito = inscripcionClase.RegistrarInscripcion();

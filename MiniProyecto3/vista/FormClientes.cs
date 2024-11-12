@@ -18,7 +18,7 @@ namespace MiniProyecto3
             string celular = txtCelular.Text;
 
             // Creamos un objeto Cliente con los datos del formulario
-            Cliente cliente = new Cliente(nombre, correo, celular);
+            modelo.Cliente cliente = new modelo.Cliente(nombre, correo, celular);
 
             // Intentamos crear el cliente en la base de datos
             bool exito = cliente.CrearCliente();
