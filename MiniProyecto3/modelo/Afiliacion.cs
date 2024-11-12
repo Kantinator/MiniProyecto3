@@ -26,10 +26,10 @@ namespace MiniProyecto3.modelo
         {
             try
             {
-                using (var conexion = new System.Data.SqlClient.SqlConnection("tu_conexion_a_base_de_datos"))
+                using (var conexion = new System.Data.SqlClient.SqlConnection("Data Source = DESKTOP-ISIP9K7\\;Initial Catalog=GimnasioDB;Integrated Security = True"))
                 {
                     conexion.Open();
-                    string consulta = @"INSERT INTO Afiliaciones (IdPlan, IdInstructor, IdCliente, FechaInicio, FechaFin)
+                    string consulta = @"INSERT INTO Afiliacion (id_plan, id_instructor, id_cliente, fecha_inicio, fecha_Fin)
                                         VALUES (@IdPlan, @IdInstructor, @IdCliente, @FechaInicio, @FechaFin)";
 
                     using (var comando = new System.Data.SqlClient.SqlCommand(consulta, conexion))

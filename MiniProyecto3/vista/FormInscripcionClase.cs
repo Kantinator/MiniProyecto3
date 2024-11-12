@@ -5,19 +5,13 @@ namespace MiniProyecto3.vista
 {
     public partial class FormInscripcionClase : Form
     {
+        MiniProyecto3.controlador.GimnasioMaster gm;
         public FormInscripcionClase()
         {
             InitializeComponent();
-            CargarComboBoxes(); // Carga los datos en los ComboBox
+            gm = new MiniProyecto3.controlador.GimnasioMaster();
         }
 
-        // Método para cargar datos en ComboBoxes
-        private void CargarComboBoxes()
-        {
-            // Cargar datos desde la base de datos en los ComboBoxes
-            cmbIdGrupo.Items.Add("1");   // Simulación de carga desde la BD
-            cmbIdCliente.Items.Add("1");
-        }
 
         // Evento para el botón de inscripción en clase
         private void btnInscribirClase_Click(object sender, EventArgs e)
@@ -25,8 +19,9 @@ namespace MiniProyecto3.vista
             try
             {
                 // Obtiene valores de los controles
-                int idGrupo = int.Parse(cmbIdGrupo.SelectedItem.ToString());
-                int idCliente = int.Parse(cmbIdCliente.SelectedItem.ToString());
+                MessageBox.Show(cmbIdGrupo.Text);
+                int idGrupo = int.Parse(cmbIdGrupo.Text);
+                int idCliente = int.Parse(cmbIdCliente.Text);
                 DateTime fechaInicio = dtpFechaInicio.Value;
                 DateTime fechaFin = dtpFechaFin.Value;
 
@@ -51,6 +46,17 @@ namespace MiniProyecto3.vista
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void FormInscripcionClase_Load(object sender, EventArgs e)
+        {
+            gm.listaGrupo(this);
+            gm.listaClientes(this);
+        }
+
+        private void cmbIdCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gm.mostrarClientes(this);
         }
     }
 }

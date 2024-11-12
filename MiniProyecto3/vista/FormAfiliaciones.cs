@@ -5,18 +5,11 @@ namespace MiniProyecto3.vista
 {
     public partial class FormAfiliaciones : Form
     {
+        MiniProyecto3.controlador.GimnasioMaster gm;
         public FormAfiliaciones()
         {
             InitializeComponent();
-            CargarComboBoxes(); // Carga los datos en los ComboBox
-        }
-
-        // Método para cargar datos en ComboBoxes
-        private void CargarComboBoxes()
-        {
-            cmbIdPlan.Items.Add("1");  
-            cmbIdInstructor.Items.Add("1");
-            cmbIdCliente.Items.Add("1");
+            gm = new MiniProyecto3.controlador.GimnasioMaster();
         }
 
         // Evento para el botón de crear afiliación
@@ -25,9 +18,10 @@ namespace MiniProyecto3.vista
             try
             {
                 // Obtiene valores de los controles
-                int idPlan = int.Parse(cmbIdPlan.SelectedItem.ToString());
-                int idInstructor = int.Parse(cmbIdInstructor.SelectedItem.ToString());
-                int idCliente = int.Parse(cmbIdCliente.SelectedItem.ToString());
+                MessageBox.Show(cmbIdPlan.Text);
+                int idPlan = int.Parse(cmbIdPlan.Text);
+                int idInstructor = int.Parse(cmbIdInstructor.Text);
+                int idCliente = int.Parse(cmbIdCliente.Text);
                 DateTime fechaInicio = dtpFechaInicio.Value;
                 DateTime fechaFin = dtpFechaFin.Value;
 
@@ -52,6 +46,28 @@ namespace MiniProyecto3.vista
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void FormAfiliaciones_Load(object sender, EventArgs e)
+        {
+            gm.listaInstructores(this);
+            gm.listaPlanes(this);
+            gm.listaClientes(this);
+        }
+
+        private void cmbIdInstructor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gm.mostrarInstructores(this);
+        }
+
+        private void cmbIdPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gm.mostrarPlanes(this);
+        }
+
+        private void cmbIdCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gm.mostrarClientes(this);
         }
     }
 }

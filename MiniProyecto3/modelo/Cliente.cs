@@ -25,10 +25,10 @@ namespace MiniProyecto3.modelo
             try
             {
 
-                using (var conexion = new SqlConnection("tu_conexion_a_base_de_datos"))
+                using (var conexion = new SqlConnection("Data Source = DESKTOP-ISIP9K7\\;Initial Catalog=GimnasioDB;Integrated Security = True"))
                 {
                     conexion.Open();
-                    string consulta = "INSERT INTO Clientes (Nombre, Correo, Celular) VALUES (@Nombre, @Correo, @Celular)";
+                    string consulta = "INSERT INTO Cliente (nombre_cliente, correo_electronico, celular) VALUES (@Nombre, @Correo, @Celular)";
 
                     using (var comando = new SqlCommand(consulta, conexion))
                     {

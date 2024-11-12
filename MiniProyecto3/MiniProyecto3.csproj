@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Afiliacion.cs" />
     <Compile Include="bd\Conexion.cs" />
     <Compile Include="modelo\Afiliacion.cs" />
     <Compile Include="bd\GestorGimnasio.cs" />
@@ -96,6 +95,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vista\FormAfiliaciones.resx">
+      <DependentUpon>FormAfiliaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\FormInscripcionClase.resx">
+      <DependentUpon>FormInscripcionClase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\frmRegistroClases.resx">
       <DependentUpon>frmRegistroClases.cs</DependentUpon>
     </EmbeddedResource>

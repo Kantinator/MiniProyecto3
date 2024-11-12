@@ -79,6 +79,24 @@ namespace MiniProyecto3.bd
             SqlDataReader consulta = cmd.ExecuteReader();
             return consulta;
         }
+        public SqlDataReader mostrarCliente(int idCliente)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "Select nombre_cliente from Cliente where id_cliente = @id";
+            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(idCliente));
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
+        public SqlDataReader mostrarPlan(int idPlan)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "Select descripcion from [Plan] where id_plan = @id";
+            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(idPlan));
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
 
         public SqlDataReader listadoIdClases()
         {
@@ -94,6 +112,31 @@ namespace MiniProyecto3.bd
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexion;
             cmd.CommandText = "Select id_instructor from Instructor";
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
+        public SqlDataReader listadoCliente()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "Select id_cliente from Cliente";
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
+        public SqlDataReader listadoPlan()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "Select id_plan from [Plan]";
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
+
+        public SqlDataReader listadoGrupo()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "Select id_grupo from Horario_Clase";
             SqlDataReader consulta = cmd.ExecuteReader();
             return consulta;
         }

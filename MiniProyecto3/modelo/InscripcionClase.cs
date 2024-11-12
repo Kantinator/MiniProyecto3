@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace MiniProyecto3.modelo 
 {
@@ -17,36 +18,35 @@ namespace MiniProyecto3.modelo
             FechaInicio = fechaInicio;
             FechaFin = fechaFin;
         }
-
+        
         // Método para registrar inscripción en la base de datos
         public bool RegistrarInscripcion()
-        {
-            bool exito = false;
-            string connectionString = "tu_cadena_de_conexion"; // Configura la cadena de conexión aquí
+         {
+             bool exito = false;
+             string connectionString = "Data Source = DESKTOP-ISIP9K7\\;Initial Catalog=GimnasioDB;Integrated Security = True"; // Configura la cadena de conexión aquí
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "INSERT INTO InscripcionClase (IdGrupo, IdCliente, FechaInicio, FechaFin) " +
-                               "VALUES (@IdGrupo, @IdCliente, @FechaInicio, @FechaFin)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdGrupo", IdGrupo);
-                command.Parameters.AddWithValue("@IdCliente", IdCliente);
-                command.Parameters.AddWithValue("@FechaInicio", FechaInicio);
-                command.Parameters.AddWithValue("@FechaFin", FechaFin);
+             using (SqlConnection connection = new SqlConnection(connectionString))
+             {
+                 string query = "INSERT INTO Inscripcion_Clase (id_grupo, id_cliente, fecha_inicio, fecha_fin) VALUES (@IdGrupo, @IdCliente, @FechaInicio, @FechaFin)";
+                 SqlCommand command = new SqlCommand(query, connection);
+                 command.Parameters.AddWithValue("@IdGrupo", this.IdGrupo);
+                 command.Parameters.AddWithValue("@IdCliente", this.IdCliente);
+                 command.Parameters.AddWithValue("@FechaInicio", this.FechaInicio);
+                 command.Parameters.AddWithValue("@FechaFin", this.FechaFin);
 
-                try
-                {
-                    connection.Open();
-                    int result = command.ExecuteNonQuery();
-                    exito = (result > 0);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error al registrar la inscripción: " + ex.Message);
-                }
-            }
+                 try
+                 {
+                     connection.Open();
+                     int result = command.ExecuteNonQuery();
+                     exito = (result > 0);
+                 }
+                 catch (Exception ex)
+                 {
+                     Console.WriteLine("Error al registrar la inscripción: " + ex.Message);
+                 }
+             }
 
-            return exito;
-        }
+             return exito;
+         }
     }
 }
