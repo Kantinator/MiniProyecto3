@@ -46,14 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Afiliacion.cs" />
     <Compile Include="bd\Conexion.cs" />
-    <Compile Include="modelo\Afiliacion.cs" />
     <Compile Include="bd\GestorGimnasio.cs" />
-    <Compile Include="modelo\Clase.cs" />
-    <Compile Include="modelo\Cliente.cs" />
+    <Compile Include="Beneficio.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="controlador\GimnasioMaster.cs" />
-    <Compile Include="modelo\HorarioClase.cs" />
-    <Compile Include="modelo\InscripcionClase.cs" />
+    <Compile Include="InscripcionClase.cs" />
+    <Compile Include="PlanesInscripcion.cs" />
+    <Compile Include="vista\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vista\FormAfiliaciones.cs">
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="vista\FormAfiliaciones.Designer.cs">
       <DependentUpon>FormAfiliaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vista\FormBeneficio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FormBeneficio.Designer.cs">
+      <DependentUpon>FormBeneficio.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\FormClientes.cs">
       <SubType>Form</SubType>
@@ -74,18 +86,21 @@
     <Compile Include="vista\FormInscripcionClase.Designer.cs">
       <DependentUpon>FormInscripcionClase.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\frmRegistroClases.cs">
+    <Compile Include="vista\FormListadoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\frmRegistroClases.Designer.cs">
-      <DependentUpon>frmRegistroClases.cs</DependentUpon>
+    <Compile Include="vista\FormListadoClientes.Designer.cs">
+      <DependentUpon>FormListadoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\frmRegistroHorario.cs">
+    <Compile Include="vista\FormPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\frmRegistroHorario.Designer.cs">
-      <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    <Compile Include="vista\FormPlan.Designer.cs">
+      <DependentUpon>FormPlan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vista\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,17 +110,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vista\FormAfiliaciones.resx">
-      <DependentUpon>FormAfiliaciones.cs</DependentUpon>
+    <EmbeddedResource Include="vista\FormBeneficio.resx">
+      <DependentUpon>FormBeneficio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\FormInscripcionClase.resx">
-      <DependentUpon>FormInscripcionClase.cs</DependentUpon>
+    <EmbeddedResource Include="vista\FormListadoClientes.resx">
+      <DependentUpon>FormListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\frmRegistroClases.resx">
-      <DependentUpon>frmRegistroClases.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\frmRegistroHorario.resx">
-      <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    <EmbeddedResource Include="vista\FormPlan.resx">
+      <DependentUpon>FormPlan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -120,6 +132,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="modelo\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
