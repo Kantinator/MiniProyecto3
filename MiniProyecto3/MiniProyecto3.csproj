@@ -52,6 +52,34 @@
     <Compile Include="modelo\Clase.cs" />
     <Compile Include="modelo\Cliente.cs" />
     <Compile Include="controlador\GimnasioMaster.cs" />
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaClienteInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaClienteInstructor.Designer.cs">
+      <DependentUpon>ListaClienteInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLGYM.cs" />
+    <Compile Include="vista\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaClienteInstructor.resx">
+      <DependentUpon>ListaClienteInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="modelo\HorarioClase.cs" />
     <Compile Include="modelo\InscripcionClase.cs" />
     <Compile Include="Program.cs" />
