@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Afiliacion.cs" />
     <Compile Include="bd\Conexion.cs" />
     <Compile Include="modelo\Afiliacion.cs" />
     <Compile Include="bd\GestorGimnasio.cs" />

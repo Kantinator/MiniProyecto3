@@ -34,6 +34,7 @@ namespace MiniProyecto3.vista
                 // Crea una instancia de Afiliacion
                 modelo.Afiliacion afiliacion = new modelo.Afiliacion(idPlan, idInstructor, idCliente, fechaInicio, fechaFin);
 
+
                 // Llama al método para crear la afiliación en la BD
                 bool exito = afiliacion.CrearAfiliacion();
 

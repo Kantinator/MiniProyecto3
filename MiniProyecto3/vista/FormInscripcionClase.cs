@@ -33,6 +33,7 @@ namespace MiniProyecto3.vista
                 // Crea una instancia de InscripcionClase
                 modelo.InscripcionClase inscripcionClase = new modelo.InscripcionClase(idGrupo, idCliente, fechaInicio, fechaFin);
 
+
                 // Llama al método para crear la inscripción en la BD
                 bool exito = inscripcionClase.RegistrarInscripcion();
 
