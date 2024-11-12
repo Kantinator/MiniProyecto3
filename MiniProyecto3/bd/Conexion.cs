@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniProyecto2.bd
+namespace MiniProyecto3.bd
 {
     internal class Conexion
     {
@@ -19,7 +19,7 @@ namespace MiniProyecto2.bd
 
             }
             conexion = new SqlConnection();
-            conexion.ConnectionString = "Data Source = DESKTOP-ISIP9K7\\;Initial Catalog=gimnasio;Integrated Security = True";
+            conexion.ConnectionString = "Data Source = DESKTOP-ISIP9K7\\;Initial Catalog=GimnasioDB;Integrated Security = True";
             try
             {
                 conexion.Open();
