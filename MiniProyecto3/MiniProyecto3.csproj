@@ -53,9 +53,21 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="controlador\GimnasioMaster.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="InscripcionClase.cs" />
     <Compile Include="PlanesInscripcion.cs" />
     <Compile Include="vista\Form1.cs">
+=======
+    <Compile Include="FormAdmin.cs">
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+    <Compile Include="FormAdmin.cs">
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+    <Compile Include="FormAdmin.cs">
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
 =======
     <Compile Include="FormAdmin.cs">
 >>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
@@ -64,7 +76,16 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>

@@ -122,6 +122,15 @@ namespace MiniProyecto3.controlador
             }
         }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
 >>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
         public void mostrarInstructores(frmRegistroHorario r)
         {
