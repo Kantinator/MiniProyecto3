@@ -110,6 +110,7 @@ namespace MiniProyecto3.controlador
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         public void mostrarClases(frmParticipantesInscritos r)
         {
@@ -132,6 +133,8 @@ namespace MiniProyecto3.controlador
 >>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
 =======
 >>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
+=======
+>>>>>>> parent of fe7f1bc (Merge branch 'master' into Fernando)
         public void mostrarInstructores(frmRegistroHorario r)
         {
             using (SqlDataReader lector = gg.mostrarInstructor(int.Parse(r.cmbInstructor.Text)))
