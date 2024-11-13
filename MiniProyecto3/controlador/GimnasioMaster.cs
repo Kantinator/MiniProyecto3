@@ -151,7 +151,16 @@ namespace MiniProyecto3.controlador
                 }
             }
         }
-
+        public void mostrarClasesGrupo(FormInscripcionClase r)
+        {
+            using (SqlDataReader lector = gg.mostrarClaseGrupo(int.Parse(r.cmbIdGrupo.Text)))
+            {
+                if (lector.Read())
+                {
+                    r.lblClase.Text = lector["descripcion_clase"].ToString();
+                }
+            }
+        }
         public void mostrarInstructores(frmRegistroHorario r)
         {
             using (SqlDataReader lector = gg.mostrarInstructor(int.Parse(r.cmbInstructor.Text)))

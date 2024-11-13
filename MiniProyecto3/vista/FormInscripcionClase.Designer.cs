@@ -28,22 +28,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.lblClase = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbIdGrupo
             // 
             this.cmbIdGrupo.FormattingEnabled = true;
             this.cmbIdGrupo.Location = new System.Drawing.Point(143, 29);
-            this.cmbIdGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdGrupo.Name = "cmbIdGrupo";
             this.cmbIdGrupo.Size = new System.Drawing.Size(151, 21);
             this.cmbIdGrupo.TabIndex = 0;
+            this.cmbIdGrupo.SelectedIndexChanged += new System.EventHandler(this.cmbIdGrupo_SelectedIndexChanged);
             // 
             // cmbIdCliente
             // 
             this.cmbIdCliente.FormattingEnabled = true;
             this.cmbIdCliente.Location = new System.Drawing.Point(143, 62);
-            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdCliente.Name = "cmbIdCliente";
             this.cmbIdCliente.Size = new System.Drawing.Size(151, 21);
             this.cmbIdCliente.TabIndex = 1;
@@ -52,7 +54,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Location = new System.Drawing.Point(143, 94);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaInicio.TabIndex = 2;
@@ -60,7 +62,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Location = new System.Drawing.Point(143, 127);
-            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaFin.TabIndex = 3;
@@ -68,7 +70,7 @@
             // btnInscribirClase
             // 
             this.btnInscribirClase.Location = new System.Drawing.Point(143, 159);
-            this.btnInscribirClase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInscribirClase.Margin = new System.Windows.Forms.Padding(2);
             this.btnInscribirClase.Name = "btnInscribirClase";
             this.btnInscribirClase.Size = new System.Drawing.Size(150, 24);
             this.btnInscribirClase.TabIndex = 4;
@@ -120,11 +122,21 @@
             this.lblCliente.Size = new System.Drawing.Size(0, 13);
             this.lblCliente.TabIndex = 9;
             // 
+            // lblClase
+            // 
+            this.lblClase.AutoSize = true;
+            this.lblClase.Location = new System.Drawing.Point(310, 32);
+            this.lblClase.Name = "lblClase";
+            this.lblClase.Size = new System.Drawing.Size(0, 13);
+            this.lblClase.TabIndex = 10;
+            // 
             // FormInscripcionClase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(438, 231);
+            this.Controls.Add(this.lblClase);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -135,7 +147,7 @@
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.btnInscribirClase);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInscripcionClase";
             this.Text = "Inscripción en Clase Dirigida";
             this.Load += new System.EventHandler(this.FormInscripcionClase_Load);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label lblCliente;
+        public System.Windows.Forms.Label lblClase;
     }
 }

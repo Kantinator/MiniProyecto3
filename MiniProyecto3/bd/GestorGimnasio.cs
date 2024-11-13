@@ -97,7 +97,15 @@ namespace MiniProyecto3.bd
             SqlDataReader consulta = cmd.ExecuteReader();
             return consulta;
         }
-
+        public SqlDataReader mostrarClaseGrupo(int idGrupo)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexion;
+            cmd.CommandText = "Select descripcion_clase from Clase c INNER JOIN Horario_Clase hc ON hc.id_clase = c.id_clase where id_grupo = @id";
+            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(idGrupo));
+            SqlDataReader consulta = cmd.ExecuteReader();
+            return consulta;
+        }
         public SqlDataReader mostrarInstructor(int idInstructor)
         {
             SqlCommand cmd = new SqlCommand();

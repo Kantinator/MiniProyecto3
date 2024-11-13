@@ -56,7 +56,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 20);
+            this.label1.Size = new System.Drawing.Size(478, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lista de los clientes que trabajan con un instructor";
             // 
@@ -81,22 +81,26 @@
             this.celular});
             this.dgvClientes.Location = new System.Drawing.Point(41, 177);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.RowHeadersWidth = 47;
             this.dgvClientes.Size = new System.Drawing.Size(409, 154);
             this.dgvClientes.TabIndex = 3;
             // 
             // nombre_cliente
             // 
             this.nombre_cliente.HeaderText = "Nombre";
+            this.nombre_cliente.MinimumWidth = 6;
             this.nombre_cliente.Name = "nombre_cliente";
             // 
             // correo_electronico
             // 
             this.correo_electronico.HeaderText = "Correo Electronico";
+            this.correo_electronico.MinimumWidth = 6;
             this.correo_electronico.Name = "correo_electronico";
             // 
             // celular
             // 
             this.celular.HeaderText = "Celular";
+            this.celular.MinimumWidth = 6;
             this.celular.Name = "celular";
             // 
             // pictureBox1
@@ -121,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbInstructores);
             this.Name = "ListaClienteInstructor";
-            this.Text = "ListaClienteInstructor";
+            this.Text = "Lista de clientes que trabajan con un instructor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

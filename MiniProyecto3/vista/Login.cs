@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProyecto3.vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,8 +35,8 @@ namespace MiniProyecto3
                 MessageBox.Show("Inicio de sesión exitoso como Administrador", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Muestra el formulario de administrador
-                FormAdmin formAdmin = new FormAdmin();
-                formAdmin.Show();
+                frmMenu menu = new frmMenu();
+                menu.Show();
 
                 // Oculta el formulario de inicio de sesión después de iniciar sesión
                 this.Hide();

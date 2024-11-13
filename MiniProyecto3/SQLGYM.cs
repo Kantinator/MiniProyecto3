@@ -10,7 +10,7 @@ namespace MiniProyecto3
 {
     internal class SQLGYM
     {
-        public string cadenaConexion = "Data Source=DESKTOP-2PNP6F6\\SQLBRIEF; Initial Catalog=GimnasioDB; Integrated Security=true;";
+        public string cadenaConexion = "Data Source=DESKTOP-ISIP9K7\\;Initial Catalog=GimnasioDB; Integrated Security=true;";
 
         public string VerificarCredenciales(string nombreUsuario, string contrasena)
         {
@@ -43,16 +43,9 @@ namespace MiniProyecto3
             }
         }
 
-        public bool RegistrarInstructor(string nombreInstructor, string cedula, string telefono, string sexo)
+        public bool RegistrarInstructor(string nombreInstructor)
         {
-            // Primero, verificar si la cédula ya existe en la base de datos
-            if (ComprobarCedulaExistente(cedula))
-            {
-                MessageBox.Show("La cédula ingresada ya está registrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            string query = "INSERT INTO Instructor (nombre_instructor, cedula, telefono, sexo) VALUES (@nombre_instructor, @cedula, @telefono, @sexo)";
+            string query = "INSERT INTO Instructor (nombre_instructor) VALUES (@nombre_instructor)";
 
             using (SqlConnection connection = new SqlConnection(cadenaConexion))
             {
@@ -64,9 +57,6 @@ namespace MiniProyecto3
                     {
                         // Agregar los parámetros
                         command.Parameters.AddWithValue("@nombre_instructor", nombreInstructor);
-                        command.Parameters.AddWithValue("@cedula", cedula);
-                        command.Parameters.AddWithValue("@telefono", telefono);
-                        command.Parameters.AddWithValue("@sexo", sexo);
 
                         // Ejecutar el comando
                         int result = command.ExecuteNonQuery();
@@ -115,11 +105,7 @@ namespace MiniProyecto3
         {
             List<Dictionary<string, string>> clientes = new List<Dictionary<string, string>>();
 
-            string query = @"
-        SELECT c.nombre_cliente, c.correo_electronico, c.celular
-        FROM Cliente c
-        INNER JOIN Afiliacion a ON c.id_cliente = a.id_cliente
-        WHERE a.id_instructor = @id_instructor";
+            string query = @"EXEC sp_Clientes_Instructor @instructor = @id_instructor";
 
             using (SqlConnection connection = new SqlConnection(cadenaConexion))
             {
@@ -137,9 +123,9 @@ namespace MiniProyecto3
                             {
                                 Dictionary<string, string> cliente = new Dictionary<string, string>
                         {
-                            { "nombre_cliente", reader["nombre_cliente"].ToString() },
-                            { "correo_electronico", reader["correo_electronico"].ToString() },
-                            { "celular", reader["celular"].ToString() }
+                            { "nombre_cliente", reader[0].ToString() },
+                            { "correo_electronico", reader[1].ToString() },
+                            { "celular", reader[2].ToString() }
                         };
                                 clientes.Add(cliente);
                             }
