@@ -46,12 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Afiliacion.cs" />
     <Compile Include="bd\Conexion.cs" />
-    <Compile Include="modelo\Afiliacion.cs" />
     <Compile Include="bd\GestorGimnasio.cs" />
-    <Compile Include="modelo\Clase.cs" />
-    <Compile Include="modelo\Cliente.cs" />
+    <Compile Include="Beneficio.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="controlador\GimnasioMaster.cs" />
+    <Compile Include="PlanesInscripcion.cs" />
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistroInstructor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     <Compile Include="vista\FormAfiliaciones.Designer.cs">
       <DependentUpon>FormAfiliaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista\FormBeneficio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\FormBeneficio.Designer.cs">
+      <DependentUpon>FormBeneficio.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,14 +141,14 @@
     <Compile Include="vista\frmRegistroClases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\frmRegistroClases.Designer.cs">
-      <DependentUpon>frmRegistroClases.cs</DependentUpon>
+    <Compile Include="vista\FormListadoClientes.Designer.cs">
+      <DependentUpon>FormListadoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\frmRegistroHorario.cs">
+    <Compile Include="vista\FormPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vista\frmRegistroHorario.Designer.cs">
-      <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    <Compile Include="vista\FormPlan.Designer.cs">
+      <DependentUpon>FormPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="vista\frmParticipantesInscritos.cs">
       <SubType>Form</SubType>
@@ -153,12 +165,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vista\FormAfiliaciones.resx">
-      <DependentUpon>FormAfiliaciones.cs</DependentUpon>
+    <EmbeddedResource Include="vista\FormBeneficio.resx">
+      <DependentUpon>FormBeneficio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\FormInscripcionClase.resx">
-      <DependentUpon>FormInscripcionClase.cs</DependentUpon>
-    </EmbeddedResource>
+
+    <EmbeddedResource Include="vista\FormListadoClientes.resx">
+      <DependentUpon>FormListadoClientes.cs</DependentUpon>
+
     <EmbeddedResource Include="vista\frmClientesActivos.resx">
       <DependentUpon>frmClientesActivos.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +181,8 @@
     <EmbeddedResource Include="vista\frmRegistroClases.resx">
       <DependentUpon>frmRegistroClases.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\frmRegistroHorario.resx">
-      <DependentUpon>frmRegistroHorario.cs</DependentUpon>
+    <EmbeddedResource Include="vista\FormPlan.resx">
+      <DependentUpon>FormPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\frmParticipantesInscritos.resx">
       <DependentUpon>frmParticipantesInscritos.cs</DependentUpon>
@@ -187,6 +200,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="modelo\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
