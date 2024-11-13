@@ -57,11 +57,6 @@
     <Compile Include="vista\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistroInstructor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegistroInstructor.Designer.cs">
-      <DependentUpon>frmRegistroInstructor.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaClienteInstructor.cs">
       <SubType>Form</SubType>
@@ -70,29 +65,15 @@
       <DependentUpon>ListaClienteInstructor.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLGYM.cs" />
-    <Compile Include="vista\frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="vista\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmRegistroInstructor.resx">
-      <DependentUpon>frmRegistroInstructor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaClienteInstructor.resx">
       <DependentUpon>ListaClienteInstructor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\FormClientes.resx">
-      <DependentUpon>FormClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -125,19 +106,6 @@
     <Compile Include="vista\FormInscripcionClase.Designer.cs">
       <DependentUpon>FormInscripcionClase.cs</DependentUpon>
     </Compile>
-    <Compile Include="vista\frmClientesActivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\frmClientesActivos.Designer.cs">
-      <DependentUpon>frmClientesActivos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\frmDetallesAfiliaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\frmDetallesAfiliaciones.Designer.cs">
-      <DependentUpon>frmDetallesAfiliaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\frmRegistroClases.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\FormListadoClientes.Designer.cs">
@@ -148,12 +116,6 @@
     </Compile>
     <Compile Include="vista\FormPlan.Designer.cs">
       <DependentUpon>FormPlan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vista\frmParticipantesInscritos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\frmParticipantesInscritos.Designer.cs">
-      <DependentUpon>frmParticipantesInscritos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,7 +129,6 @@
     <EmbeddedResource Include="vista\FormBeneficio.resx">
       <DependentUpon>FormBeneficio.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="vista\FormListadoClientes.resx">
       <DependentUpon>FormListadoClientes.cs</DependentUpon>
 	</EmbeddedResource>
@@ -182,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\FormPlan.resx">
       <DependentUpon>FormPlan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vista\frmParticipantesInscritos.resx">
-      <DependentUpon>frmParticipantesInscritos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

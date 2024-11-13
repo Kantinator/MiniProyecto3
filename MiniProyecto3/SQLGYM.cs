@@ -10,7 +10,6 @@ namespace MiniProyecto3
 {
     internal class SQLGYM
     {
-        public string cadenaConexion = "Data Source=DESKTOP-ISIP9K7\\;Initial Catalog=GimnasioDB; Integrated Security=true;";
 
         public string VerificarCredenciales(string nombreUsuario, string contrasena)
         {
@@ -43,9 +42,7 @@ namespace MiniProyecto3
             }
         }
 
-        public bool RegistrarInstructor(string nombreInstructor)
         {
-            string query = "INSERT INTO Instructor (nombre_instructor) VALUES (@nombre_instructor)";
 
             using (SqlConnection connection = new SqlConnection(cadenaConexion))
             {
@@ -105,7 +102,6 @@ namespace MiniProyecto3
         {
             List<Dictionary<string, string>> clientes = new List<Dictionary<string, string>>();
 
-            string query = @"EXEC sp_Clientes_Instructor @instructor = @id_instructor";
 
             using (SqlConnection connection = new SqlConnection(cadenaConexion))
             {
@@ -123,9 +119,6 @@ namespace MiniProyecto3
                             {
                                 Dictionary<string, string> cliente = new Dictionary<string, string>
                         {
-                            { "nombre_cliente", reader[0].ToString() },
-                            { "correo_electronico", reader[1].ToString() },
-                            { "celular", reader[2].ToString() }
                         };
                                 clientes.Add(cliente);
                             }
