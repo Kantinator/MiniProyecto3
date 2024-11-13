@@ -69,6 +69,7 @@ namespace MiniProyecto3.bd
             SqlDataReader consulta = cmd.ExecuteReader();
             return consulta;
         }
+
         public SqlDataReader mostrarInstructor(int idInstructor)
         {
             SqlCommand cmd = new SqlCommand();

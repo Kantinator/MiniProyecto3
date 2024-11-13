@@ -34,6 +34,7 @@
             // 
             this.cmbIdGrupo.FormattingEnabled = true;
             this.cmbIdGrupo.Location = new System.Drawing.Point(143, 29);
+            this.cmbIdGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbIdGrupo.Name = "cmbIdGrupo";
             this.cmbIdGrupo.Size = new System.Drawing.Size(151, 21);
             this.cmbIdGrupo.TabIndex = 0;
@@ -42,6 +43,7 @@
             // 
             this.cmbIdCliente.FormattingEnabled = true;
             this.cmbIdCliente.Location = new System.Drawing.Point(143, 62);
+            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbIdCliente.Name = "cmbIdCliente";
             this.cmbIdCliente.Size = new System.Drawing.Size(151, 21);
             this.cmbIdCliente.TabIndex = 1;
@@ -50,6 +52,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Location = new System.Drawing.Point(143, 94);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaInicio.TabIndex = 2;
@@ -57,6 +60,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Location = new System.Drawing.Point(143, 127);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaFin.TabIndex = 3;
@@ -64,6 +68,7 @@
             // btnInscribirClase
             // 
             this.btnInscribirClase.Location = new System.Drawing.Point(143, 159);
+            this.btnInscribirClase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInscribirClase.Name = "btnInscribirClase";
             this.btnInscribirClase.Size = new System.Drawing.Size(150, 24);
             this.btnInscribirClase.TabIndex = 4;
@@ -130,6 +135,7 @@
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.btnInscribirClase);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormInscripcionClase";
             this.Text = "Inscripción en Clase Dirigida";
             this.Load += new System.EventHandler(this.FormInscripcionClase_Load);

@@ -109,6 +109,8 @@ namespace MiniProyecto3.controlador
             }
         }
 
+<<<<<<< HEAD
+=======
         public void mostrarClases(frmParticipantesInscritos r)
         {
             using (SqlDataReader lector = gg.mostrarClase(int.Parse(r.cmbClase.Text)))
@@ -119,6 +121,8 @@ namespace MiniProyecto3.controlador
                 }
             }
         }
+
+>>>>>>> parent of 3c03392 (Agregado menu principal. Ajustado aportes de Jimmy. Cambio de apariencia a todos los forms.)
         public void mostrarInstructores(frmRegistroHorario r)
         {
             using (SqlDataReader lector = gg.mostrarInstructor(int.Parse(r.cmbInstructor.Text)))

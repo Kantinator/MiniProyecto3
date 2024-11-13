@@ -88,6 +88,7 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // frmDetalleAfiliaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,6 +99,7 @@
             this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.dgvDetalles);
+            this.Name = "frmDetalleAfiliaciones";
             this.Text = "Listado de detalles de afiliaciones";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
             this.ResumeLayout(false);

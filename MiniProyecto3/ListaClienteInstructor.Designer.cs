@@ -56,6 +56,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 41);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(414, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lista de los clientes que trabajan con un instructor";
             // 
@@ -120,6 +121,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbInstructores);
             this.Name = "ListaClienteInstructor";
+            this.Text = "ListaClienteInstructor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
