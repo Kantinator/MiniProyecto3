@@ -58,5 +58,10 @@ namespace MiniProyecto3.vista
         {
             gm.mostrarClientes(this);
         }
+
+        private void cmbIdGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gm.mostrarClasesGrupo(this);
+        }
     }
 }

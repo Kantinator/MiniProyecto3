@@ -36,7 +36,7 @@
             // 
             this.cmbIdPlan.FormattingEnabled = true;
             this.cmbIdPlan.Location = new System.Drawing.Point(136, 21);
-            this.cmbIdPlan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdPlan.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdPlan.Name = "cmbIdPlan";
             this.cmbIdPlan.Size = new System.Drawing.Size(151, 21);
             this.cmbIdPlan.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             this.cmbIdInstructor.FormattingEnabled = true;
             this.cmbIdInstructor.Location = new System.Drawing.Point(136, 54);
-            this.cmbIdInstructor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdInstructor.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdInstructor.Name = "cmbIdInstructor";
             this.cmbIdInstructor.Size = new System.Drawing.Size(151, 21);
             this.cmbIdInstructor.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.cmbIdCliente.FormattingEnabled = true;
             this.cmbIdCliente.Location = new System.Drawing.Point(136, 86);
-            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdCliente.Name = "cmbIdCliente";
             this.cmbIdCliente.Size = new System.Drawing.Size(151, 21);
             this.cmbIdCliente.TabIndex = 2;
@@ -65,7 +65,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Location = new System.Drawing.Point(136, 119);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaInicio.TabIndex = 3;
@@ -73,7 +73,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Location = new System.Drawing.Point(136, 151);
-            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaFin.TabIndex = 4;
@@ -81,7 +81,7 @@
             // btnCrearAfiliacion
             // 
             this.btnCrearAfiliacion.Location = new System.Drawing.Point(136, 184);
-            this.btnCrearAfiliacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearAfiliacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearAfiliacion.Name = "btnCrearAfiliacion";
             this.btnCrearAfiliacion.Size = new System.Drawing.Size(150, 24);
             this.btnCrearAfiliacion.TabIndex = 5;
@@ -162,6 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(424, 231);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -177,7 +178,7 @@
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.btnCrearAfiliacion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAfiliaciones";
             this.Text = "Registrar Afiliación";
             this.Load += new System.EventHandler(this.FormAfiliaciones_Load);
